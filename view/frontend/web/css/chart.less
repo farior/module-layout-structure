@@ -1,0 +1,89 @@
+.Treant {
+  overflow: hidden;
+  padding: 0 !important;
+  position: relative;
+
+  & > .node {
+    display: block;
+    position: absolute;
+    visibility: hidden;
+
+    & img {
+      border: none;
+      float: left;
+    }
+  }
+
+  & > .pseudo {
+    border: none;
+    display: block;
+    height: 0;
+    padding: 0;
+    position: absolute;
+    visibility: hidden;
+    width: 0;
+  }
+
+  & .collapse-switch {
+    border: 1px solid black;
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    width: 100%;
+  }
+
+  & .collapsed {
+    & .collapse-switch {
+      background-color: #868DEE;
+    }
+  }
+
+  &.Treant-loaded {
+    & .node, & .pseudo {
+      visibility: visible;
+    }
+  }
+
+  &.chart {
+    border-bottom: 2px dashed #C8C8C8;
+    border-top: 2px dashed #C8C8C8;
+    cursor: grab;
+    height: 90vh;
+    width: 100%;
+
+    & p {
+      margin: 0;
+      padding: 0;
+    }
+
+    & .node {
+      background-color: #fff;
+      border: 3px solid #C8C8C8;
+      border-radius: 10px;
+      color: #000;
+      text-align: center;
+
+      & p {
+        font-size: 10px;
+        word-break: keep-all;
+
+        &.node-name {
+          color: #452669;
+        }
+        &.node-title {
+          font-size: 14px;
+        }
+        &.node-desc {
+          color: #2a28b7;
+        }
+        &.node-contact {
+          color: #16693d;
+        }
+      }
+    }
+  }
+}
